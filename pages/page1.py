@@ -8,9 +8,7 @@ if('user_name' in st.session_state and st.session_state.user_name):
         st.metric("学年", st.session_state.get('user_grade','未設定'))
     with col2:
         if st.session_state.get('user_hobbies'):
-            st.write("**趣味:**")
-            for hobby in st.session_state.user_hobbies:
-                st.write(f"• {hobby}")
+            st.write("趣未", st.session_state.user_hobbies)
         else:
             st.write("**趣味:** 未設定")
     st.balloons()
